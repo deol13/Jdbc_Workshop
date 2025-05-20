@@ -22,12 +22,12 @@ public class Main {
         //update();
         //deleteById();
     }
-
+    //TODO: Change the id in findById, update and deleteById depending on save if you want to test the code.
     public static void findById(){
         try{
             CityDaoImpl cityDao = new CityDaoImpl(MySQLConnection.getConnection());
 
-            Optional<City> city = cityDao.findById(4082);
+            Optional<City> city = cityDao.findById(4081);
 
             System.out.println(city.toString());
             System.out.println("Operation is Done!");
@@ -101,7 +101,7 @@ public class Main {
         try{
             CityDaoImpl cityDao = new CityDaoImpl(MySQLConnection.getConnection());
 
-            cityDao.deleteById(4082);
+            cityDao.deleteById(4081);
 
             System.out.println("Delete Operation is Done!");
 
